@@ -127,12 +127,12 @@ public class BinaryTrees {
         Node root = preOrderTree.buildTree(nodes);
         //System.out.println(root.data);
 
-        // preorderTraversal(root);
+         preorderTraversal(root);
         // System.out.println();
         // inorderTraversal(root);
         // System.out.println();
         // postOrderTraversal(root);
-        levelOrder(root);
+        //levelOrder(root);
         
     }
     

@@ -32,14 +32,32 @@ public class Practice1 {
     }
 
     public static void traversalPreOrder(Node root){
+        if(root == null){
+            return;
+        }
+
+        System.out.print(root.data);
+        traversalPreOrder(root.left);
+        traversalPreOrder(root.right);
         
     }
 
+    public static void traversalPostorder(Node root){
+        if(root == null) return;
+
+        traversalPostorder(root.left);
+        traversalPostorder(root.right);
+        System.out.print(root.data);
+    }
+
     public static void main(String[] args) {
-        int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+        int[] nodes = {1, 2, 4, -1, -1, 5, 7, -1, -1, -1, 3, -1, 6, -1, -1};
         BuildingTree q = new BuildingTree();
         Node root = q.practiceTree(nodes);
-        System.out.print(root.data);
+        System.out.println(root.data);
+        traversalPreOrder(root);
+        System.out.println();
+        traversalPostorder(root);
 
     }
 }
